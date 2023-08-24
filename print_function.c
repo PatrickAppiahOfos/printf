@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
                         {
                                 char c = va_arg(list_of_arguments, int);
 
-                                write(1, %c, 1);
+                                write(1, &c, 1);
                                 char_++;
                         }
 
