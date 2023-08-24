@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	int printed_chars = 0;
+	unsigned int chars = 0;
 	const char *c = format;
 
 	while (*c != '\0')
@@ -25,24 +25,24 @@ int _printf(const char *format, ...)
 			{
 				int num = va_arg(args, int);
 
-				printed_chars += printf("%d", num);
+				chars += printf("%d", num);
 			}
 			else
 			{
 				putchar('%');
 				putchar(*c);
-				printed_chars += 2;
+				chars += 2;
 			}
 		}
 		else
 		{
 			putchar(*c);
-			printed_chars++;
+			chars++;
 		}
 		c++;
 	}
 	va_end(args);
-	return (printed_chars);
+	return (chars);
 }
 
 /**

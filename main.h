@@ -7,5 +7,6 @@
 int _printf(const char *format, ...);
 int binary (int num);
 int octal(int mum);
+int _putchar(char c);
 
 #endif
