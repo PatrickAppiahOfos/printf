@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unsistd.h>
 
 /*print character*/
 
