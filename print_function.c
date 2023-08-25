@@ -59,16 +59,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (printed_chars);
 }
-/**
- * main - test function
- * Return: (0)
- */
-
-int main(void)
-{
-	char c = 'A';
-	char *str = "Hello, World!";
-
-	_printf("Character: %c\nString: %s\nLiteral %%\n", c, str);
-	return (0);
-}
